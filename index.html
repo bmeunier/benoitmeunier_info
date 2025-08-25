@@ -39,8 +39,6 @@
             color: #a1a1a1;
             text-decoration: none;
             font-size: clamp(12px, 2.5vw, 16px);
-        }
-        .links a {
             display: block;
             margin-bottom: 8px;
         }
@@ -144,25 +142,6 @@
         });
       }
       
-      function typeHTML(element, speed = 12) {
-        return new Promise(resolve => {
-          const originalHTML = element.innerHTML;
-          element.innerHTML = '';
-          element.style.visibility = 'visible';
-          let i = 0;
-          
-          function type() {
-            if (i < originalHTML.length) {
-              element.innerHTML = originalHTML.slice(0, i + 1);
-              i++;
-              setTimeout(type, speed);
-            } else {
-              resolve();
-            }
-          }
-          type();
-        });
-      }
       
       async function startBBSSequence() {
         const loading = document.getElementById('loading');
@@ -263,14 +242,12 @@
         confirmElement.innerHTML = '';
         await typeText(confirmElement, confirmText);
         
-        // Add the input span and cursor
-        confirmElement.innerHTML += '<span id="' + activeConfirmChar.id + '"></span><span class="cursor">_</span>';
+        // Add the input span and cursor with proper ID
+        const charId = type + '-char';
+        confirmElement.innerHTML += '<span id="' + charId + '"></span><span class="cursor">_</span>';
         
         // Update active char reference
-        if (type === 'e') activeConfirmChar = document.getElementById('email-char');
-        else if (type === 'l') activeConfirmChar = document.getElementById('linkedin-char');
-        else if (type === 'x') activeConfirmChar = document.getElementById('x-char');
-        else if (type === 'y') activeConfirmChar = document.getElementById('youtube-char');
+        activeConfirmChar = document.getElementById(charId);
         
         currentState = 'confirm-' + type;
       }
@@ -302,6 +279,9 @@
         if (isTyping) return;
         
         const activeChar = currentState === 'main' ? typedChar : activeConfirmChar;
+        
+        // Safety check for activeChar
+        if (!activeChar) return;
         
         // Handle backspace
         if (evt.key === 'Backspace') {
