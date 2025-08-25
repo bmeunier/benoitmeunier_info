@@ -35,12 +35,21 @@
         .links {
             margin-top: 20px;
             text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
         .links a {
             color: #4d4d4d;
             text-decoration: none;
-            margin: 0 10px;
-            font-size: clamp(12px, 2.5vw, 16px);
+            font-size: clamp(24px, 5vw, 32px);
+        }
+        @media (max-width: 480px) {
+            .links {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
         .links a:hover, .links a:focus {
             outline: none;
@@ -49,39 +58,51 @@
             color: #f90;
             font-weight: bold;
         }
+        .links a .bracket {
+            color: #3a3a3a;
+        }
+        p {
+            color: #4d4d4d;
+            font-size: clamp(24px, 5vw, 32px);
+            text-align: center;
+            margin: 20px 0;
+            width: 50%;
+        }
     </style>
 </head>
 <body>
     <pre>
-        .-==============-------------------:::.                 .:------===:.               
-        :#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*.           -%@@@@@@@@@@@@@@+              
-       .*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%=         +@@@@@@@@@@@@@@@@#:             
-       .*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%:       =@@@@@@@@@@@@@@@@@#:             
-        .*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*      :#@@@@@@@@@@@@@@@@@#:             
-           ........................:#@@@@@@@=:%@@@@@@%-     =@@@@@@@#..=@@@@@@@#:             
-                                    *@@@@@@@= =@@@@@@@+.   :%@@@@@@@:  =%@@@@@@#:             
-                                    *@@@@@@@=  %@@@@@@@-   =@@@@@@@+   =%@@@@@@#:             
-         .+%@@%@@%@@%@@%@@%@@%@@%@@@@@@@@@@#:  :@@@@@@@*. .@@@@@@@@.   =%@@@@@@#:             
-        =@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=    %@@@@@@@: *@@@@@@@=    -%@@@@@@#.             
-       :#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*     .@@@@@@@@@@@@@@@@%.    -%@@@@@@#.             
-        +@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=     *@@@@@@@@@@@@@@@-     -%@@@@@@#.             
-         .*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*:    .@@@@@@@@@@@@@@*.     -%@@@@@@#.             
-                                    *@@@@@@@=     =@@@@@@@@@@@@@-      -%@@@@@@#.             
-                                    *@@@@@@@=     :%@@@@@@@@@@@+.      -%@@@@@@#.             
-                                   .#@@@@@@@=      =@@@@@@@@@@%-       -%@@@@@@#.             
-         =@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*.      :#@@@@@@@@@*.       -%@@@@@@#.             
-       .*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%:        =@@@@@@@@%:        :%@@@@@@#.             
-       .*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#.         .*@@@@@@@*         -%@@@@@@*.             
-        =%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%:            =@@@@@@%:         :%@@@@@@=              
-          :======================---:.                :-----.            :===:   
+ .-==============-------------------:::.                 .:------===:.    
+ :#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*.           -%@@@@@@@@@@@@@@+ 
+.*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%=         +@@@@@@@@@@@@@@@@#:
+.*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%:       =@@@@@@@@@@@@@@@@@#:
+ .*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*      :#@@@@@@@@@@@@@@@@@#:
+    ........................:#@@@@@@@=:%@@@@@@%-     =@@@@@@@#..=@@@@@@@#:
+                             *@@@@@@@= =@@@@@@@+.   :%@@@@@@@:  =%@@@@@@#:
+                             *@@@@@@@=  %@@@@@@@-   =@@@@@@@+   =%@@@@@@#:
+  .+%@@%@@%@@%@@%@@%@@%@@%@@@@@@@@@@#:  :@@@@@@@*. .@@@@@@@@.   =%@@@@@@#:
+ =@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=    %@@@@@@@: *@@@@@@@=    -%@@@@@@#.
+:#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*     .@@@@@@@@@@@@@@@@%.    -%@@@@@@#.
+ +@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=     *@@@@@@@@@@@@@@@-     -%@@@@@@#.
+  .*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*:    .@@@@@@@@@@@@@@*.     -%@@@@@@#.
+                             *@@@@@@@=     =@@@@@@@@@@@@@-      -%@@@@@@#.
+                             *@@@@@@@=     :%@@@@@@@@@@@+.      -%@@@@@@#.
+                            .#@@@@@@@=      =@@@@@@@@@@%-       -%@@@@@@#.
+  =@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*.      :#@@@@@@@@@*.       -%@@@@@@#.
+.*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%:        =@@@@@@@@%:        :%@@@@@@#.
+.*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#.         .*@@@@@@@*         -%@@@@@@*.
+ =%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%:            =@@@@@@%:         :%@@@@@@= 
+   :======================---:.                :-----.            :===:   
        
        
     </pre>
+    <p>I am a maker of experiences, crafting with code and steel, where sparks transform into structures.</p>
+    
     <div class="links">
-        <a href="mailto:ecrire@benoitmeunier.info" title="Email Benoit" data-hotkey="e">[<span class="hotkey">E</span>]mail</a>
-        <a href="https://www.linkedin.com/in/benoitmeunier/" title="LinkedIn" data-hotkey="l">[<span class="hotkey">L</span>]inkedin</a>
-        <a href="https://www.x.com/bmeunier" title="X" data-hotkey="x">[<span class="hotkey">X</span>]</a>
-        <a href="https://www.youtube.com/@b_meunier" title="YouTube" data-hotkey="y">[<span class="hotkey">Y</span>]outube</a>
+        <a href="mailto:ecrire@benoitmeunier.info" title="Email Benoit" data-hotkey="e"><span class="bracket">[</span><span class="hotkey">E</span><span class="bracket">]</span>mail</a>
+        <a href="https://www.linkedin.com/in/benoitmeunier/" title="LinkedIn" data-hotkey="l"><span class="bracket">[</span><span class="hotkey">L</span><span class="bracket">]</span>inkedIn</a>
+        <a href="https://www.x.com/bmeunier" title="X" data-hotkey="x"><span class="bracket">[</span><span class="hotkey">X</span><span class="bracket">]</span></a>
+        <a href="https://www.youtube.com/@b_meunier" title="YouTube" data-hotkey="y"><span class="bracket">[</span><span class="hotkey">Y</span><span class="bracket">]</span>outube</a>
     </div>
     <script>
       // Hotkey: press E, L, X, or Y to open respective links
